@@ -1,4 +1,11 @@
 package pl.pk.springwithgit.repo;
 
-public interface AddressRepository {
+import org.springframework.data.repository.CrudRepository;
+import pl.pk.springwithgit.domain.Address;
+
+import java.util.List;
+
+public interface AddressRepository extends CrudRepository<Address, Long> {
+
+    List<Address> findAllOrderByCity();
 }
