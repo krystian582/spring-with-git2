@@ -9,6 +9,7 @@ import pl.pk.springwithgit.domain.Address;
 @RequestMapping("/address")
 public class AddressRestController {
 
+
     @GetMapping("/my")
     public Address getMyAddress() {
         return new Address("warsaw", "unknown", 40);
